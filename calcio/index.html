@@ -72,5 +72,62 @@
 
             legal stuff!
         </footer>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBz3lcW8piC3WFEDll-xe67_Ki4SksPcQQ",
+            authDomain: "calcio-ea850.firebaseapp.com",
+            databaseURL: "https://calcio-ea850.firebaseio.com",
+            projectId: "calcio-ea850",
+            storageBucket: "calcio-ea850.appspot.com",
+            messagingSenderId: "345725537347",
+            appId: "1:345725537347:web:2518440570092fc41b58f6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        </script>
+
+        <!-- Firebase scripts start here!-->
+
+        <script src="myfirebase.js">
+
+            console.log("working")
+            var database = firebase.database();
+
+            function create_user(name) {
+                firebase.database().ref('names/' + name).set({
+                    nome: name,
+                    ammonizioni: 0,
+                    espulsioni: 0,
+                    presenze: 0,
+                    infortuni: 0,
+                    tempo_partita: 0,
+                    tempo_allenamento: 0,
+                    cartellini: 0
+                    });
+            }
+
+            function get_users() {
+                var parent = document.getElementById("options");
+                let names = database.ref().child("names");
+                names.on('value', function(snapshot) {
+                   let nomi = snapshot.val();
+                   for (nome in nomi) {
+                       el = document.createElement("li");
+                       el.appendChild(nome);
+                       parent.appendChild(el);
+                   }
+                });
+            }
+        </script>
+
+        <div onload="get_users()"></div>
+        
     </body>
 </html>

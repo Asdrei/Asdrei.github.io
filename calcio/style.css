@@ -1,0 +1,164 @@
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+* {
+    font-family: sans-serif;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+header {
+    display: inline-block;
+    width: 99vw;
+    height: 7vh;
+
+    padding-top: 1vh;
+    font-size: 6vh;
+    padding-left: 1vw;
+
+    color: white;
+    background-image: repeating-linear-gradient(#1fa01f, #1fd01f);
+}
+
+#sandwich-hitbox {
+    width: 40px;
+    height: 34px;
+}
+
+
+#sandwich {
+    height: 5px;
+    width: 40px;
+    display: block;
+    background-color: white;
+    transform: translateY(2.5vh);
+    border-radius: 2.5px;
+}
+
+#sandwich::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 40px;
+    background-color: white;
+    transform: translateY(-12px);
+    border-radius: 2.5px;
+}
+
+#sandwich::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 40px;
+    background-color: white;
+    transform: translateY(7px);
+    border-radius: 2.5px;
+}
+
+#topbar-text {
+    margin-left: 100px;
+}
+
+footer {
+    position: absolute;
+    top: 93vh;
+    left: 0px;
+    width: 99vw;
+    height: 5vh;
+
+    padding-top: 2vh;
+    padding-left: 1vw;
+    
+
+    font-size: 2.5vh;
+
+    color: white;
+    background-image: repeating-linear-gradient(#1fd01f, #1fa01f);
+}
+
+#center {
+    display: flexbox;
+}
+
+#sidebar {
+    display: block;
+    float: left;
+    width: 18vw;
+    height: 85vh;
+    
+    font-size: 2.5vh;
+    overflow-y: scroll;
+
+    background-color: whitesmoke;
+    color: #222;
+}
+
+#options > li {
+    width: 100%;
+}
+
+#options > li::after {
+    content: "";
+    display: block;
+    background-image: linear-gradient(90deg,#aaaaaa, #222222, #f5f5f5);
+    width: 100%;
+    height: 1px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#new {
+    height: 100%;
+    border: none;
+    font-size: inherit;
+    vertical-align: bottom;
+    border-right: 0;
+    border-radius: 2px;
+}
+
+#new-submit {
+    height: 100%;
+    background-color: white;
+    border-radius: 50%;
+    width: 2.5vh;
+    height: 2.5vh;
+    vertical-align: bottom;
+    border-left: 0;
+    font-weight: bold;
+}
+
+#mainbox {
+    display: block;
+    float: right;
+    height: 85vh;
+    width: 82vw;
+
+    background-image: url('background.jpg');
+
+    
+}
+
+#mainbox-content {
+    width: 100%;
+    height: 100%;
+    background-color: #fffff0dd;
+    
+}
+
+#whitebox {
+    width: 75%;
+    height: 70%;
+    border-radius: 40px;
+    background-color: white;
+    transform: translate(15%, 15%);
+    text-align: center;
+}
+
+#name {
+    font-size: 3vh;
+    transform: translateY(20px);
+    color: black;
+}

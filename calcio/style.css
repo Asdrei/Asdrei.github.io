@@ -84,7 +84,7 @@ footer {
 }
 
 #sidebar {
-    display: block;
+    display: none;
     float: left;
     width: 18vw;
     height: 85vh;
@@ -134,7 +134,7 @@ footer {
     display: block;
     float: right;
     height: 85vh;
-    width: 82vw;
+    width: 100vw;
 
     background-image: url('background.jpg');
 
@@ -144,7 +144,7 @@ footer {
 #mainbox-content {
     width: 100%;
     height: 100%;
-    background-color: #fffff0dd;
+    background-color: #fffff0aa;
     
 }
 

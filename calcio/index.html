@@ -23,7 +23,7 @@
             <div id="sidebar">
                 <ul id="options">
                     <li>aggiungi: <input type="text" id="new" placeholder="nome">
-                         <input type="button" id="new-submit" value="+"></li>
+                         <input type="button" id="new-submit" value="+" onclick="add_name()"></li>
                     <li>esempio1</li>
                     <li>esempio2</li>
                     <li>esempio3</li>
@@ -77,6 +77,8 @@
 
         <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
 
         <script>
         // Your web app's Firebase configuration
@@ -96,8 +98,6 @@
         <!-- Firebase scripts start here!-->
 
         <script src="myfirebase.js"></script>
-
-        <div onload="get_users()"></div>
         
     </body>
 </html>

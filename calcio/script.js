@@ -16,3 +16,8 @@ function switch_menu() {
             break;
     }
 }
+
+function add_name() {
+    create_user(document.getElementById("new").value);
+    document.getElementById("new").value = "";
+}

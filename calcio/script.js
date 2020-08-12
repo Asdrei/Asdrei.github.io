@@ -19,5 +19,8 @@ function switch_menu() {
 
 function add_name() {
     create_user(document.getElementById("new").value);
-    document.getElementById("new").value = "";
+    console.log(document.getElementById("new").value);
+    let sidebar = document.getElementById("options");
+    sidebar.innerHTML = '<li>aggiungi: <input type="text" id="new" placeholder="nome"> <input type="button" id="new-submit" value="+" onclick="add_name()"></li>';
+    get_users();
 }

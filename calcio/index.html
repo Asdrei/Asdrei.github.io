@@ -24,33 +24,6 @@
                 <ul id="options">
                     <li>aggiungi: <input type="text" id="new" placeholder="nome">
                          <input type="button" id="new-submit" value="+" onclick="add_name()"></li>
-                    <li>esempio1</li>
-                    <li>esempio2</li>
-                    <li>esempio3</li>
-                    <li>esempio4</li>
-                    <li>esempio5</li>
-                    <li>esempio6</li>
-                    <li>esempio7</li>
-                    <li>esempio8</li>
-                    <li>esempio9</li>
-                    <li>esempio1</li>
-                    <li>esempio2</li>
-                    <li>esempio3</li>
-                    <li>esempio4</li>
-                    <li>esempio5</li>
-                    <li>esempio6</li>
-                    <li>esempio7</li>
-                    <li>esempio8</li>
-                    <li>esempio9</li>
-                    <li>esempio1</li>
-                    <li>esempio2</li>
-                    <li>esempio3</li>
-                    <li>esempio4</li>
-                    <li>esempio5</li>
-                    <li>esempio6</li>
-                    <li>esempio7</li>
-                    <li>esempio8</li>
-                    <li>esempio9</li>
                 </ul>
 
             </div>
@@ -77,8 +50,8 @@
 
         <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
 
         <script>
         // Your web app's Firebase configuration
@@ -87,9 +60,7 @@
             authDomain: "calcio-ea850.firebaseapp.com",
             databaseURL: "https://calcio-ea850.firebaseio.com",
             projectId: "calcio-ea850",
-            storageBucket: "calcio-ea850.appspot.com",
-            messagingSenderId: "345725537347",
-            appId: "1:345725537347:web:2518440570092fc41b58f6"
+            storageBucket: "calcio-ea850.appspot.com"
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
@@ -99,5 +70,8 @@
 
         <script src="myfirebase.js"></script>
         
+        <script>
+            get_users();
+        </script>
     </body>
 </html>

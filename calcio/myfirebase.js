@@ -1,5 +1,4 @@
 
-console.log("working")
 var database = firebase.database();
 
 function create_user(name) {
@@ -16,13 +15,14 @@ function create_user(name) {
 }
 
 function get_users() {
+    console.log("getting user list")
     var parent = document.getElementById("options");
     let names = database.ref().child("names");
     names.on('value', function(snapshot) {
         let nomi = snapshot.val();
         for (nome in nomi) {
             el = document.createElement("li");
-            el.appendChild(nome);
+            el.appendChild(document.createTextNode(nome));
             parent.appendChild(el);
         }
     });

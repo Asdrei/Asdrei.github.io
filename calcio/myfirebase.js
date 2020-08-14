@@ -24,6 +24,10 @@ function get_users() {
             el = document.createElement("li");
             el.appendChild(document.createTextNode(nome));
             parent.appendChild(el);
+            el.setAttribute("id", nome);
+            el.addEventListener("click", set_current(nome));
         }
     });
+    console.log("done!")
 }
+

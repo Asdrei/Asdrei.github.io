@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
     <head>
+        <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
         <script src="script.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,9 +33,23 @@
                 <div id="mainbox-content">
 
                     <div id="whitebox">
-
-                        <h1 id="name">nome</h1>
-
+                        <h1 id="name"></h1>
+                        <div id="data">
+                            <p>ammonizioni: </p>
+                            <input type="text" id="ammonizioni" class="data_text"></input><br />
+                            <p>espulsioni: </p>
+                            <input type="text" id="espulsioni" class="data_text"></input><br />
+                            <p>presenze: </p>
+                            <input type="text" id="presenze" class="data_text"></input><br />
+                            <p>infortuni: </p>
+                            <input type="text" id="infortuni" class="data_text"></input><br />
+                            <p>tempo in partita: </p>
+                            <input type="text" id="tempo_partita" class="data_text"></input><br />
+                            <p>tempo di allenamento: </p>
+                            <input type="text" id="tempo_allenamento" class="data_text"></input><br />
+                            <button onclick="remove_name()" class="data_button">remove</button>
+                            <button onclick="save()" class="data_button">save</button>
+                        </div>
                     </div>
                 </div>
 
@@ -43,7 +58,7 @@
 
         <footer id="bottom-bar">
 
-            legal stuff!
+            Do NOT distribute, data are NOT obfuscated!
         </footer>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>

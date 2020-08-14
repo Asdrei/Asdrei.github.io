@@ -20,23 +20,22 @@ function switch_menu() {
 }
 
 function add_name() {
+    if (document.getElementById("new").value != "") {
     create_user(document.getElementById("new").value);
-    console.log(document.getElementById("new").value);
-    let sidebar = document.getElementById("options");
-    sidebar.innerHTML = '<li>aggiungi: <input type="text" id="new" placeholder="nome"> <input type="button" id="new-submit" value="+" onclick="add_name()"></li>';
     get_users();
-}
-
-
-/*
-function set_current(nome) {
-    let children = document.getElementById("options").childNodes;
-    for (let i = 1; i < children.length; i++){
-        if (children[i]) {
-            
-        children[i].setAttribute("class", "hidden");
-        }
     }
-
 }
-*/
+
+
+
+function set_current(nome) {
+    if (current_name != null) {
+        save();
+    }
+    current_name = nome;
+    document.getElementById("name").innerHTML = "";
+    document.getElementById("name").appendChild(document.createTextNode(nome));
+    get_data(nome);
+    document.getElementById("whitebox").style.display = "block";
+}
+

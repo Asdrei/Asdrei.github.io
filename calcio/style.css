@@ -153,6 +153,7 @@ footer {
 }
 
 #whitebox {
+    display: none;
     width: 75%;
     height: 70%;
     border-radius: 40px;
@@ -165,4 +166,28 @@ footer {
     font-size: 3vh;
     transform: translateY(20px);
     color: black;
+}
+
+#data {
+    padding: 7%;
+}
+
+#data * {
+    text-align: center;
+    font-size: 2vh;
+}
+
+.data_text {
+    text-align: left;
+    background-color: whitesmoke;
+}
+
+.data_button {
+    border-radius: 5px;
+    background-color: #1fa01f;
+    background-image: radial-gradient(#1fd01f,#1fa01f);
+    color: whitesmoke;
+    width: 11vh;
+    padding: 6px;
+    margin-top: 20px;
 }
